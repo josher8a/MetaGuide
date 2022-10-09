@@ -5,15 +5,47 @@ import { Location } from './components/location/location'
 
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import ExampleLens from './components/example_lens'
-import {DisconnectedIndex} from './components/home'
+import { Discover } from './components/discover'
 import { useAccount } from 'wagmi'
-import {Explore} from './components/explore'
+import { useState } from 'react'
+import { ReviewCard } from './components/review/reviewCard'
 
 const Home: NextPage = () => {
     const { isConnected } = useAccount()
 
-    return isConnected ? <Explore /> :  <DisconnectedIndex/>
-    
+    const [isExplore, setIsExplore] = useState(false)
+    const [reviews, setReviews] = useState([])
+
+    const handleExplore = () => {
+        setIsExplore(true)
+    }
+
+    return (
+        <div className={styles.container}>
+            <main className={styles.main}>
+                <h1 className={styles.title}>MetaGuides</h1>
+
+                <p className={styles.description}>
+                    The descentralized way to share and travel around the world.
+                </p>
+
+                <div className={styles.inputBox}>
+                    <input placeholder="Bogota, Colombia"></input>
+                </div>
+
+                {isExplore ? (
+                    reviews.map((result, index) => (
+                        <ReviewCard key={index} review={result} />
+                    ))
+                ) : (
+                    <Discover />
+                )}
+            </main>
+            <div className="connectButtonContainer">
+                <ConnectButton />
+            </div>
+        </div>
+    )
 }
 
 export default Home
