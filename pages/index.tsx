@@ -1,10 +1,7 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Location } from './components/location/location'
 
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import ExampleLens from './components/example_lens'
 import { Discover } from './components/discover'
 import { useAccount } from 'wagmi'
 import { useState } from 'react'

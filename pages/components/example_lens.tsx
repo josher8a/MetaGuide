@@ -1,6 +1,5 @@
 import { gql } from '@apollo/client'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { apolloClient } from '../../client/lens/apollo-client'
 
 export default function ExampleLens() {
