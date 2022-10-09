@@ -1,10 +1,9 @@
 import styles from '../../styles/Home.module.css'
 import { Location } from './location/location'
 
-import ExampleLens from './example_lens'
 
 
-export const Discover = ()=>{
+export default function Discover(){
     return (
         
         <>

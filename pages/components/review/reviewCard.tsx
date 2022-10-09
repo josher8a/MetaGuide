@@ -1,6 +1,5 @@
-import Image from 'next/image'
 
-export function ReviewCard({ review, }: {
+export default function ReviewCard({ review, }: {
     review: {
     
 } }) {

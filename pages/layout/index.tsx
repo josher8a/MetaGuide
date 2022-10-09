@@ -1,7 +1,7 @@
 import styles from '../../styles/Layout.module.css'
 import Head from 'next/head'
 
-export function Layout({ children }: { children: any }) {
+export default function Layout({ children }: { children: any }) {
     return (
         <>
             <div className={styles.layout}>

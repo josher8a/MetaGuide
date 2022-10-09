@@ -18,3 +18,5 @@ export function Location({ image, row, column, height, location }: { image: stri
         </div> 
     )
 }
+
+export default Location

@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { Discover } from './components/discover'
+import Discover from './components/discover'
 import { useAccount } from 'wagmi'
 import { useState } from 'react'
-import { ReviewCard } from './components/review/reviewCard'
+import ReviewCard from './components/review/reviewCard'
 
 const Home: NextPage = () => {
     const { isConnected } = useAccount()
